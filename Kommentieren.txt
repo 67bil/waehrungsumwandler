@@ -1,1 +1,22 @@
+Projekt 10.04:
+
+Projekt ausgesucht: Währungsumwandler 
+APIs können aus dem Internet abgerufen werden  
+Wichtigste Währungen: Euro €, Dollar, türkische Lira, kolumbianische Peso 
+Aufrufbarer Kurs 
+
+ Projekt 17.04:
+
+Github für gemeinsames arbeiten: 
+Account für Student, Eingangsprüfung ob man ein Roboter ist 
+APIs recherchiert 
+Ideen für das Overlay: 
+Wie bei Translate dass man eingangs und ausgangswert hat 
+Den Kurs Aufrufbar machen 
+
+Visual studios Codespaces (Github):
+https://www.youtube.com/watch?v=AQcwa5-FjpE
+https://www.youtube.com/watch?v=f12LE6P9KzQ
+
+Projekt 18.04:
 
