@@ -2,7 +2,7 @@ Projekt 10.04:
 
 Projekt ausgesucht: Währungsumwandler 
 APIs können aus dem Internet abgerufen werden  
-Wichtigste Währungen: Euro €, Dollar, türkische Lira, kolumbianische Peso 
+Wichtigste Währungen: Euro €, Dollar, türkische Lira(TRY), kolumbianische Peso (COP)
 Aufrufbarer Kurs 
 
  Projekt 17.04:
@@ -17,7 +17,9 @@ Den Kurs Aufrufbar machen
 Visual studios Codespaces (Github):
 https://www.youtube.com/watch?v=AQcwa5-FjpE
 https://www.youtube.com/watch?v=f12LE6P9KzQ
+https://marketplace.visualstudio.com/VSCode
 
 Projekt 18.04:
 
 Einfinden in das Programm
+Währungen aus der Klasse: Renminbi Yuan (China:CNY),  Forint(Ungarn:HUF), V-Bucks (Fortnite:VB), Zloty (Polen:PLN), Lek (Albanien:ALL), Won(Nordkorea:KRW), Rubel(Russland:RUB), Rupee (Indien:INR), 
