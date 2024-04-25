@@ -8,7 +8,7 @@ root = tk.Tk()
 root.title('Währungsumrechner')
 root.geometry('500x500')
 
-options = ['EUR', 'TRY', 'CNY', 'USD', 'COP', 'HUF', 'PHP', 'VB', 'PLN', 'RUB', 'UAH', 'GBP', 'JPY', 'THB', 'ALL', 'KRW']
+options = ['EUR', 'TRY', 'CNY', 'USD', 'COP', 'HUF', 'PHP', 'VB', 'PLN', 'RUB', 'KGS', 'GBP', 'JPY', 'THB', 'ALL', 'KRW']
 
 selected_option = tk.StringVar(root)
 selected_option.set(options[0])  # 
