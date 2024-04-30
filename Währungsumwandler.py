@@ -1,5 +1,7 @@
 from abc import get_cache_token
 import tkinter as tk
+import freecurrencyapi 
+client = freecurrencyapi.Client('API_KEY')
 
 def validate_input(input):
     if input.isdigit():
@@ -37,6 +39,23 @@ def validate_decimal_input(input):
     else:
         return False
 
+
+# Legende/Wechselkurse
+def create_window():
+    window = tk.Toplevel(root)
+ 
+b1 = tk.Button(root, text="Wechselkurse", command=create_window)
+b1.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the button to the slightly up and left
+ 
+# New button for "Legende"
+def show_legende():
+    legend_window = tk.Toplevel(root)
+    legend_window.title("Legende")
+    import legende.py as legende
+    # Add your content for the legend window here
+ 
+b2 = tk.Button(root, text="Legende", command=show_legende)
+b2.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the "Legende" button to the slightly up and left
 
 
 start_wahrung_label = tk.Label(root, text='Startwährung', font=('Helvetica', 12))
