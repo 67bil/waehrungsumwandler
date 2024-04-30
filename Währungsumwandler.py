@@ -39,6 +39,7 @@ def validate_decimal_input(input):
     else:
         return False
 
+# Herr Alkan bester Lehrer ❤
 
 # Legende/Wechselkurse
 def create_window():
