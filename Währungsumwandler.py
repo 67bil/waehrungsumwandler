@@ -1,7 +1,7 @@
 from abc import get_cache_token
 import tkinter as tk
-import freecurrencyapi 
-client = freecurrencyapi.Client('API_KEY')
+import currencyapicom
+client = currencyapicom.Client('cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIENr')
 
 def validate_input(input):
     if input.isdigit():
@@ -63,6 +63,15 @@ start_wahrung_label = tk.Label(root, text='Startwährung', font=('Helvetica', 12
 start_wahrung_label.pack(side=tk.LEFT)
 ziel_wahrung_label = tk.Label(root, text='Zielwährung', font=('Helvetica', 12))
 ziel_wahrung_label.pack(side=tk.LEFT)
+
+#https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Zonguldak_in_Turkey.svg/300px-Zonguldak_in_Turkey.svg.png
+#API (momentan herausfinden wie es geht also nicht fertig)
+result = client.currencies(currencies=['EUR', 'CAD'])
+print(result)
+
+result = client.latest()
+print(result)
+
 
 entry_var = tk.StringVar()
 entry = tk.Entry(root, textvariable=entry_var)
