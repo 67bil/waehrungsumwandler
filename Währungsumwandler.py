@@ -1,6 +1,4 @@
-
 from abc import get_cache_token
-#import get_cache_token
 import tkinter as tk
 import currencyapicom
 client = currencyapicom.Client('cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIENr')
@@ -54,50 +52,6 @@ b1.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the button to the
 def show_legende():
     legend_window = tk.Toplevel(root)
     legend_window.title("Legende")
-
-    # Add your content for the legend window here
- 
-b2 = tk.Button(root, text="Legende", command=show_legende)
-b2.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the "Legende" button to the slightly up and left
-
-
-start_wahrung_label = tk.Label(root, text='Startwährung', font=('Helvetica', 12))
-start_wahrung_label.pack(side=tk.LEFT)
-ziel_wahrung_label = tk.Label(root, text='Zielwährung', font=('Helvetica', 12))
-ziel_wahrung_label.pack(side=tk.LEFT)
-
-#https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Zonguldak_in_Turkey.svg/300px-Zonguldak_in_Turkey.svg.png
-#API (momentan herausfinden wie es geht also nicht fertig)
-result = client.currencies(currencies=['EUR', 'CAD'])
-print(result)
-
-result = client.latest()
-print(result)
-
-
-entry_var = tk.StringVar()
-entry = tk.Entry(root, textvariable=entry_var)
-entry.pack()
-output_var = tk.StringVar()
-output_field = tk.Entry(root, textvariable=output_var, state='readonly')
-output_field.pack()
-
-
-
-
-def reset():
-  entry_var.set('')
-  output_var.set('')
-
-berechnen_button = tk.Button(root, text='Berechnen')
-berechnen_button.pack(side=tk.LEFT, padx=10)
-zurucksetzen_button = tk.Button(root, text='Zurücksetzen', command=reset)
-zurucksetzen_button.pack(side=tk.RIGHT, padx=10)
-
-root.mainloop()
-)
-    legend_window.title("Legende")
-
     # Add your content for the legend window here
  
 b2 = tk.Button(root, text="Legende", command=show_legende)
