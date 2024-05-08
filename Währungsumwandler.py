@@ -52,7 +52,7 @@ b1.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the button to the
 def show_legende():
     legend_window = tk.Toplevel(root)
     legend_window.title("Legende")
-    import legende.py as legende
+
     # Add your content for the legend window here
  
 b2 = tk.Button(root, text="Legende", command=show_legende)
