@@ -1,8 +1,10 @@
 from abc import get_cache_token
 import tkinter as tk
+import os (src)
+src="\\file\users$\gat455\Desktop\projekt\legende.py"
 import currencyapicom
-client = currencyapicom.Client('')
-#cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIENr
+client = currencyapicom.Client('cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIENr')
+#
 def validate_input(input):
     if input.isdigit():
         return True
@@ -49,12 +51,11 @@ b1 = tk.Button(root, text="Wechselkurse", command=create_window)
 b1.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the button to the slightly up and left
  
 # New button for "Legende"
-def show_legende():
-    legend_window = tk.Toplevel(root)
-    legend_window.title("Legende")
+def open_legende():
+
     # Add your content for the legend window here
  
-b2 = tk.Button(root, text="Legende", command=show_legende)
+b2 = tk.Button(root, text="Legende", command=open_legende)
 b2.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the "Legende" button to the slightly up and left
 
 
