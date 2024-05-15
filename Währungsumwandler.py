@@ -1,8 +1,8 @@
 from abc import get_cache_token
 import tkinter as tk
 import currencyapicom
-client = currencyapicom.Client('cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIENr')
-
+client = currencyapicom.Client('')
+#cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIENr
 def validate_input(input):
     if input.isdigit():
         return True
@@ -63,6 +63,7 @@ start_wahrung_label.pack(side=tk.LEFT)
 ziel_wahrung_label = tk.Label(root, text='Zielwährung', font=('Helvetica', 12))
 ziel_wahrung_label.pack(side=tk.LEFT)
 
+
 #https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Zonguldak_in_Turkey.svg/300px-Zonguldak_in_Turkey.svg.png
 #API (momentan herausfinden wie es geht also nicht fertig)
 result = client.currencies(currencies=['EUR', 'CAD'])
@@ -80,13 +81,16 @@ output_field = tk.Entry(root, textvariable=output_var, state='readonly')
 output_field.pack()
 
 
-
+def berechnen():
+    entry_var.get()
+    result = client.currencies(currencies=['EUR', 'CAD'])
+    output_var.set(result)
 
 def reset():
   entry_var.set('')
   output_var.set('')
 
-berechnen_button = tk.Button(root, text='Berechnen')
+berechnen_button = tk.Button(root, text='Berechnen', command=berechnen)
 berechnen_button.pack(side=tk.LEFT, padx=10)
 zurucksetzen_button = tk.Button(root, text='Zurücksetzen', command=reset)
 zurucksetzen_button.pack(side=tk.RIGHT, padx=10)
