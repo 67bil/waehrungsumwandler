@@ -1,7 +1,5 @@
 from abc import get_cache_token
 import tkinter as tk
-import os (src)
-src="\\file\users$\gat455\Desktop\projekt\legende.py"
 import currencyapicom
 client = currencyapicom.Client('cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIENr')
 #
@@ -51,7 +49,9 @@ b1 = tk.Button(root, text="Wechselkurse", command=create_window)
 b1.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the button to the slightly up and left
  
 # New button for "Legende"
+<<<<<<< HEAD
 def open_legende():
+    window = tk.Toplevel
 
     # Add your content for the legend window here
  
