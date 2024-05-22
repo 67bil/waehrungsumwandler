@@ -49,9 +49,8 @@ b1 = tk.Button(root, text="Wechselkurse", command=create_window)
 b1.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the button to the slightly up and left
  
 # New button for "Legende"
-<<<<<<< HEAD
 def open_legende():
-    window = tk.Toplevel
+    window = tk.Toplevel(root)
 
     # Add your content for the legend window here
  
