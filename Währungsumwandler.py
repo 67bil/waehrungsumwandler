@@ -45,7 +45,6 @@ def validate_decimal_input(input):
 
 # Legende/Wechselkurse
 def create_window():
-
     window = tk.Toplevel(root)
     
 b1 = tk.Button(root, text="Wechselkurse", command=create_window)
@@ -77,7 +76,9 @@ result = client.currencies(currencies=['EUR', 'CAD'])
 print(result)
 
 result = client.latest()
-print(result)
+print (result['data']['TRY']['value'])
+
+
 
 
 entry_var = tk.StringVar()
