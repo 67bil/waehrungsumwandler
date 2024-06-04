@@ -15,7 +15,7 @@ label_wahrung.pack(pady=20)
 frame = tk.Frame(root)
 frame.pack(pady=10)
 
-options = ['EUR', 'TRY', 'CNY', 'USD', 'COP', 'HUF', 'PHP', 'VB', 'PLN', 'RUB', 'KGS', 'GBP', 'JPY', 'THB', 'ALL', 'KRW']
+options = ['EUR', 'TRY', 'CNY', 'USD', 'COP', 'HUF', 'PHP', 'VB', 'PLN', 'RUB', 'KGS', 'GBP', 'JPY', 'THB', 'ALL', 'KRW', 'SOS']
 
 selected_option = tk.StringVar(root)
 selected_option.set(options[0])
@@ -72,11 +72,7 @@ output_field.pack()
 
 
 
-#Testen:
-print(round(ergebnis,2))
 
-# ergebnis muss in output
-###Funktion zu Ende
 
 
 
@@ -93,8 +89,14 @@ def berechnen():
 
     #umzuwandeln = 1
 
-    ergebnis =(int (entry_var.get())/q) * z
+    ergebnis =(float (entry_var.get())/q) * z
     output_var.set(round(ergebnis,2))
+
+
+
+
+# ergebnis muss in output
+###Funktion zu Ende
     
 def reset():
   entry_var.set('')
