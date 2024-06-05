@@ -6,7 +6,7 @@ client = currencyapicom.Client('cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIEN
 root = tk.Tk()
 root.title('Währungsumwandler')
 root.geometry('500x500')
-
+font= ("Courier")
 
 label_wahrung = tk.Label(root, text='Währungsumwandler', font=('Helvetica', 12))
 label_wahrung.pack(pady=20)
@@ -16,6 +16,7 @@ frame = tk.Frame(root)
 frame.pack(pady=10)
 
 options = ['EUR', 'TRY', 'CNY', 'USD', 'COP', 'HUF', 'PHP', 'VB', 'PLN', 'RUB', 'KGS', 'GBP', 'JPY', 'THB', 'ALL', 'KRW', 'SOS']
+
 
 selected_option = tk.StringVar(root)
 selected_option.set(options[0])
@@ -31,17 +32,17 @@ dropdown2.pack(side=tk.RIGHT)
 
 
 
+
 def berechnen():
     ###Funktion zum Umwandeln
     result = client.latest()
     #Quellwaehrung:
-    qw = selected_option.get()
-    q = result['data'][qw]['value']
-
+  
+    qw =(selected_option.get)()
+    q = result['data'][qw]['value'] 
     #Zielwaehrung
     zw = selected_option2.get()
     z = result['data'][zw]['value']
-
     #umzuwandeln = 1
 
     ergebnis =(float (entry_var.get())/q) * z
@@ -130,7 +131,7 @@ def open_legende():
     label_won.pack()
 
     label_sol=tk.Label(rootlegende, text='SOL=Somalia Schilling (Somalia)')
-
+    label_sol.pack()
 
 b2 = tk.Button(root, text="Legende", command=open_legende)
 b2.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10) 
