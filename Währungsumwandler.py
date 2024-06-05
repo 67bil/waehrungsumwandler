@@ -82,7 +82,7 @@ def open_legende():
     
     rootlegende = tk.Tk()
     rootlegende.title ('Legende')
-    rootlegende.geometry('300x450')
+    rootlegende.geometry('300x350')
 
     label_euro =tk.Label(rootlegende, text='EUR=EURO')
     label_euro.pack()
