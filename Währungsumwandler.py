@@ -4,11 +4,11 @@ import currencyapicom
 client = currencyapicom.Client('cur_live_nQra2J0SGFy6q39HriU9LkK8lRUzXoOe4ELKIENr')
 
 root = tk.Tk()
-root.title('Währungsumrechner')
+root.title('Währungsumwandler')
 root.geometry('500x500')
 
 
-label_wahrung = tk.Label(root, text='Währung', font=('Helvetica', 12))
+label_wahrung = tk.Label(root, text='Währungsumwandler', font=('Helvetica', 12))
 label_wahrung.pack(pady=20)
 
 
@@ -31,51 +31,6 @@ dropdown2.pack(side=tk.RIGHT)
 
 
 
-# Herr Alkan bester Lehrer ❤
-
-
-
-# Legende/Wechselkurse
-def create_window():
-    window = tk.Toplevel(root)
-    
-b1 = tk.Button(root, text="Wechselkurse", command=create_window)
-b1.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the button to the slightly up and left
-
-
- 
-# New button for "Legende"
-
-def open_legende():
-    window = tk.Toplevel(root)
-    
-
-    # Add your content for the legend window here
- 
-b2 = tk.Button(root, text="Legende", command=open_legende)
-b2.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the "Legende" button to the slightly up and left
-
-
-#quell_waehrung_label = tk.Label(root, text='Quellwährung', font=('Helvetica', 12))
-#quell_waehrung_label.pack(side=tk.LEFT)
-#ziel_waehrung_label = tk.Label(root, text='Zielwährung', font=('Helvetica', 12))
-#ziel_waehrung_label.pack(side=tk.LEFT)
-
-
-entry_var = tk.StringVar()
-entry = tk.Entry(root, textvariable=entry_var)
-entry.pack()
-output_var = tk.StringVar()
-output_field = tk.Entry(root, textvariable=output_var, state='readonly')
-output_field.pack()
-
-
-
-
-
-
-
-
 def berechnen():
     ###Funktion zum Umwandeln
     result = client.latest()
@@ -91,24 +46,111 @@ def berechnen():
 
     ergebnis =(float (entry_var.get())/q) * z
     output_var.set(round(ergebnis,2))
-
-
-
-
-# ergebnis muss in output
-###Funktion zu Ende
-    
+   
 def reset():
   entry_var.set('')
   output_var.set('')
 
+
+entry_var = tk.StringVar()
+entry = tk.Entry(root, textvariable=entry_var)
+entry.pack()
+output_var = tk.StringVar()
+output_field = tk.Entry(root, textvariable=output_var, state='readonly')
+output_field.pack()
+
+
+
 berechnen_button = tk.Button(root, text='Berechnen', command=berechnen)
-berechnen_button.pack(side=tk.LEFT, padx=10)
+berechnen_button.pack(padx=150,pady=5)
 zurucksetzen_button = tk.Button(root, text='Zurücksetzen', command=reset)
-zurucksetzen_button.pack(side=tk.RIGHT, padx=10)
+zurucksetzen_button.pack(padx=10)
+
+# Herr Alkan bester Lehrer ❤
+
+
+'''
+# Legende/Wechselkurse
+def create_window():
+    window = tk.Toplevel(root)
+    
+b1 = tk.Button(root, text="Wechselkurse", command=create_window)
+b1.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10)  # Move the button to the slightly up and left
+'''
+
+def open_legende():
+    
+    rootlegende = tk.Tk()
+    rootlegende.title ('Legende')
+    rootlegende.geometry('300x450')
+
+    label_euro =tk.Label(rootlegende, text='EUR=EURO')
+    label_euro.pack()
+
+    label_lira=tk.Label(rootlegende, text='TRY=TÜRKISCHE LIRA(TÜRKEI)')
+    label_lira.pack()
+
+    label_yuan=tk.Label(rootlegende, text='CNY=RENMINBI YUAN(CHINA)')
+    label_yuan.pack()
+
+    label_dollar=tk.Label(rootlegende, text='USD=US-DOLLAR(USA)')
+    label_dollar.pack()
+
+    label_peso=tk.Label(rootlegende, text='COP=PESO(KOLUMBIEN)')
+    label_peso.pack()
+
+    label_forint=tk.Label(rootlegende, text='HUF=FORINT(UNGARN)')
+    label_forint.pack()
+
+    label_philipinische_peso=tk.Label(rootlegende, text='PHP= PESO(PHILIPPINIEN)')
+    label_philipinische_peso.pack()
+
+    label_vbucks=tk.Label(rootlegende, text='VB=V-BUCKS(FORTNITE)')
+    label_vbucks.pack()
+
+    label_zloty=tk.Label(rootlegende, text='PLN=ZLOTY(POLEN)')
+    label_zloty.pack()
+
+    label_rubel=tk.Label(rootlegende, text='RUB=RUBEL(RUSSLAND)')
+    label_rubel.pack()
+
+    label_pfund=tk.Label(rootlegende, text='GBP=PFUND STERLING(VEREINIGTES KÖNIGREICH)')
+    label_pfund.pack()
+
+    label_yen=tk.Label(rootlegende, text='JPY=YEN(JAPAN)')
+    label_yen.pack()
+
+    label_baht=tk.Label(rootlegende, text='THB=BAHT(THAILAND)')
+    label_baht.pack()
+
+    label_lek=tk.Label(rootlegende, text='ALL=LEK(ALBANIEN)')
+    label_lek.pack()
+
+    label_won=tk.Label(rootlegende, text='KRW=WON(SÜDKOREA)')
+    label_won.pack()
+
+    label_sol=tk.Label(rootlegende, text='SOL=Somalia Schilling (Somalia)')
+
+
+b2 = tk.Button(root, text="Legende", command=open_legende)
+b2.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10) 
+# New button for "Legende"
+
+
+
 
 
 
 
 
 root.mainloop()
+
+    
+
+
+
+
+
+
+
+
