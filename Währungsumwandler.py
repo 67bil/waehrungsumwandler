@@ -37,22 +37,22 @@ def berechnen():
     if qw == 'VB':
         q = 950 / 10 # 950 V-Bucks = 10 EUR -> 1 V-Buck = 10 / 950 EUR
     else:
-        q = result['data'][qw]['value']  # Ergebnis mit der
+        q = result['data'][qw]['value']  # data= Umrechnungskurse, value= Der Umrechnungskurs spezifisch von der qw (Quellwährung)
 
     # Zielwährung
     zw = selected_option2.get()
     if zw == 'VB':
         z = 950 / 10
     else:
-        z = result['data'][zw]['value']
+        z = result['data'][zw]['value'] # data= Umrechnungskurse, value= Der Umrechnungskurs spezifisch von der zw (Zielwährung)
 
     ergebnis = (float(entry_var.get()) / q) * z
     output_var.set(round(ergebnis, 2))
 
 ### Funktion zum Zurücksetzen
 def reset():
-    entry_var.set('')
-    output_var.set('')
+    entry_var.set('') #Felder leer weil in '' nichts steht
+    output_var.set('')#Felder leer weil in '' nichts steht
 
 ### Ein- und Ausgabefelder
 entry_var = tk.StringVar() # Speichert die Eingabe
