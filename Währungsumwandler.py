@@ -37,14 +37,14 @@ def berechnen():
     if qw == 'VB':
         q = 950 / 10 # 950 V-Bucks = 10 EUR -> 1 V-Buck = 10 / 950 EUR
     else:
-        q = result['data'][qw]['value']  # data= Umrechnungskurse, value= Der Umrechnungskurs spezifisch von der qw (Quellwährung)
+        q = result['data'][qw]['value']  # data= Umrechnungskurse werden von der API abgefragt, value= Der Umrechnungskurs spezifisch von der qw (Quellwährung)
 
     # Zielwährung
     zw = selected_option2.get()
     if zw == 'VB':
         z = 950 / 10
     else:
-        z = result['data'][zw]['value'] # data= Umrechnungskurse, value= Der Umrechnungskurs spezifisch von der zw (Zielwährung)
+        z = result['data'][zw]['value'] # data= Umrechnungskurse werden von der API abgefragt, value= Der Umrechnungskurs spezifisch von der zw (Zielwährung)
 
     ergebnis = (float(entry_var.get()) / q) * z
     output_var.set(round(ergebnis, 2))
