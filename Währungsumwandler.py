@@ -35,14 +35,14 @@ def berechnen():
     # Quellwährung
     qw = selected_option.get() # Auswahl aus Dropdown wird gegettet
     if qw == 'VB':
-        q = 950 / 10 # 950 V-Bucks = 10 EUR -> 1 V-Buck = 10 / 950 EUR
+        q = 950 / 10 # 950 V-Bucks = 10 USD -> 1 V-Buck = 10 / 950 USD
     else:
         q = result['data'][qw]['value']  # data= Umrechnungskurse werden von der API abgefragt, value= Der Umrechnungskurs spezifisch von der qw (Quellwährung)
 
     # Zielwährung
     zw = selected_option2.get()
     if zw == 'VB':
-        z = 950 / 10
+        z = 950 / 10 # 950 V-Bucks = 10 USD -> 1 V-Buck = 10 / 950 USD
     else:
         z = result['data'][zw]['value'] # data= Umrechnungskurse werden von der API abgefragt, value= Der Umrechnungskurs spezifisch von der zw (Zielwährung)
 
