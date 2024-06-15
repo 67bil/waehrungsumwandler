@@ -46,8 +46,8 @@ def berechnen():
     else:
         z = result['data'][zw]['value'] # data= Umrechnungskurse werden von der API abgefragt, value= Der Umrechnungskurs spezifisch von der zw (Zielwährung)
 
-    ergebnis = (float(entry_var.get()) / q) * z
-    output_var.set(round(ergebnis, 2))
+    ergebnis = (float(entry_var.get()) / q) * z #Rechnunug (Standartwährung ist Dollar deswegen durch q geteilt und das Ergebnis davon dann mit der Zielwährung Mulipliziert)
+    output_var.set(round(ergebnis, 2)) #Damit das Ergebnis im  Ausgabefeld angezeigt wird (auf 2 Nachkommastellen gerundet)
 
 ### Funktion zum Zurücksetzen
 def reset():
