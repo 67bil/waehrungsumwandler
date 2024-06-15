@@ -137,4 +137,5 @@ def open_legende():
 ButtonLegende = tk.Button(root, text="Legende", font=('Courier', 10),command=open_legende) # Knopf 'Legende'
 ButtonLegende.pack(side=tk.RIGHT, anchor=tk.SE, padx=10, pady=10) # Position
 
+
 root.mainloop()
